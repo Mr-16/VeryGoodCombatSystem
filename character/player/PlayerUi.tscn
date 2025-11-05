@@ -1,0 +1,78 @@
+[gd_scene load_steps=4 format=3 uid="uid://cl3fyq2dmxbj"]
+
+[ext_resource type="Script" uid="uid://dp7mgwhemciae" path="res://character/player/PlayerUi.cs" id="1_7vg2j"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7vg2j"]
+bg_color = Color(0, 0.14509805, 0.078431375, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5qjl4"]
+bg_color = Color(0, 0.2627451, 0.078431375, 1)
+
+[node name="PlayerUi" type="CanvasLayer" node_paths=PackedStringArray("nameLabel", "healthBar", "healthLabel", "expBar", "levelLabel", "expLabel")]
+script = ExtResource("1_7vg2j")
+nameLabel = NodePath("NameLabel")
+healthBar = NodePath("HealthBar")
+healthLabel = NodePath("HealthBar/HealthLabel")
+expBar = NodePath("ExpBar")
+levelLabel = NodePath("ExpBar/LevelLabel")
+expLabel = NodePath("ExpBar/ExpLabel")
+
+[node name="NameLabel" type="Label" parent="."]
+offset_left = 67.0
+offset_top = 64.0
+offset_right = 114.0
+offset_bottom = 87.0
+text = "Name"
+
+[node name="HealthBar" type="ProgressBar" parent="."]
+self_modulate = Color(1, 0, 0, 1)
+offset_left = 68.0
+offset_top = 94.0
+offset_right = 379.0
+offset_bottom = 117.0
+value = 30.3
+show_percentage = false
+
+[node name="HealthLabel" type="Label" parent="HealthBar"]
+layout_mode = 0
+offset_left = 134.0
+offset_top = -4.0
+offset_right = 165.0
+offset_bottom = 24.0
+theme_override_font_sizes/font_size = 20
+text = "0/0"
+
+[node name="HpLabel" type="Label" parent="HealthBar"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = -5.0
+offset_right = 38.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 20
+text = "HP"
+
+[node name="ExpBar" type="ProgressBar" parent="."]
+offset_left = 68.0
+offset_top = 612.0
+offset_right = 1092.0
+offset_bottom = 628.0
+theme_override_styles/background = SubResource("StyleBoxFlat_7vg2j")
+theme_override_styles/fill = SubResource("StyleBoxFlat_5qjl4")
+value = 6.92
+show_percentage = false
+
+[node name="LevelLabel" type="Label" parent="ExpBar"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = -5.0
+offset_right = 77.0
+offset_bottom = 18.0
+text = "Lv.10"
+
+[node name="ExpLabel" type="Label" parent="ExpBar"]
+layout_mode = 0
+offset_left = 466.0
+offset_top = -5.0
+offset_right = 537.0
+offset_bottom = 18.0
+text = "100/1000"

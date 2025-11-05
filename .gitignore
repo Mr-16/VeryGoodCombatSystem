@@ -1,0 +1,133 @@
+# ==============================================
+# Godot 引擎相关忽略规则
+# ==============================================
+# 导入资源缓存（自动生成，可重新导入）
+.import/
+# Godot 项目状态文件（记录窗口布局、最近打开文件等，本地状态）
+*.godot.tscn.state
+*.godot.res.state
+# 导出模板缓存
+.export/
+# 临时导出文件
+exported/
+# Godot 调试日志
+godot.log
+godot3.log
+# Godot 崩溃报告
+crash.log
+# 翻译文件的自动生成缓存
+.translation/
+# 导入器备份文件
+*.import.bak
+# Godot 4.x 项目元数据（本地配置，无需提交）
+.project.godot.bak
+# 共享场景的冲突文件
+*.godot.tscn.conflict
+*.godot.res.conflict
+
+# ==============================================
+# C# 编译产物（核心忽略）
+# ==============================================
+# 编译输出目录（Debug/Release）
+bin/
+obj/
+# 程序集文件
+*.dll
+*.exe
+*.pdb
+*.mdb
+# 中间编译文件
+*.csobj
+*.cache
+# Roslyn 编译缓存
+.roslyn/
+# C# 生成的 XML 文档
+*.xml
+# .NET 运行时配置
+*.runtimeconfig.json
+*.runtimeconfig.dev.json
+# NuGet 包缓存（本地依赖，通过 NuGet.config 恢复）
+.nuget/
+#  paket 依赖管理缓存（如果使用）
+.paket/
+paket-files/
+paket.lock.bak
+
+# ==============================================
+# IDE/编辑器配置文件
+# ==============================================
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.vcxproj.filters
+*.vcxproj.user
+# Visual Studio Code
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+*.code-workspace
+# Rider
+.idea/
+*.sln.iml
+*.csproj.iml
+*.idea/
+# MonoDevelop/Xamarin Studio
+*.userprefs
+*.pidb
+*.mdp
+# 其他编辑器
+*.sublime-*
+.atom/
+.vim/
+*.swp
+*.swo
+
+# ==============================================
+# 操作系统临时文件
+# ==============================================
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+nohup.out
+# Linux
+*~
+.cache/
+.nfs*
+
+# ==============================================
+# 其他临时/日志文件
+# ==============================================
+# 日志文件
+*.log
+*.txt
+# 压缩包
+*.zip
+*.rar
+*.7z
+# 备份文件
+*.bak
+*.old
+*.tmp
+# 环境变量文件（本地配置，不提交）
+.env
+.env.local
+.env.development
+# 数据库文件（如果本地使用）
+*.db
+*.sqlite

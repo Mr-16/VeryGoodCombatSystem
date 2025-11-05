@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://0wx2amadkx86"]
+
+[ext_resource type="Script" uid="uid://co4uir20mjm8n" path="res://character/DamagePopupLabel.cs" id="1_87b6q"]
+
+[node name="DamagePopupLabel" type="Label"]
+offset_left = -26.0
+offset_top = -11.0
+offset_right = 25.0
+offset_bottom = 12.0
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
+script = ExtResource("1_87b6q")

@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=3 uid="uid://b2twlywt56k3q"]
+
+[ext_resource type="Script" uid="uid://caoq7gjpjwgxn" path="res://main/Startup.cs" id="1_g7tqg"]
+[ext_resource type="PackedScene" uid="uid://cy0rta5qdh2gf" path="res://main/MainScene.tscn" id="2_ykcld"]
+
+[node name="Startup" type="Control" node_paths=PackedStringArray("StartGameBtn", "ExitGameBtn")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_g7tqg")
+StartGameBtn = NodePath("ColorRect/StartGameBtn")
+ExitGameBtn = NodePath("ColorRect/ExitGameBtn")
+mainScene = ExtResource("2_ykcld")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1148.0
+offset_bottom = 634.0
+color = Color(1, 0.8980392, 1, 1)
+
+[node name="ExitGameBtn" type="Button" parent="ColorRect"]
+layout_mode = 0
+offset_left = 619.0
+offset_top = 255.0
+offset_right = 1027.0
+offset_bottom = 400.0
+theme_override_font_sizes/font_size = 100
+text = "退出游戏"
+
+[node name="StartGameBtn" type="Button" parent="ColorRect"]
+layout_mode = 0
+offset_left = 134.0
+offset_top = 257.0
+offset_right = 542.0
+offset_bottom = 402.0
+theme_override_font_sizes/font_size = 100
+text = "开始游戏
+"

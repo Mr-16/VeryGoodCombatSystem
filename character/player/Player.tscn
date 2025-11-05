@@ -1,0 +1,48 @@
+[gd_scene load_steps=9 format=3 uid="uid://ckxfp2v6j6kxj"]
+
+[ext_resource type="Script" uid="uid://4h22w6i6vbtl" path="res://character/player/Player.cs" id="1_kyqiw"]
+[ext_resource type="Texture2D" uid="uid://c56ire8wxfaeg" path="res://icon.svg" id="1_rpqav"]
+[ext_resource type="PackedScene" uid="uid://0wx2amadkx86" path="res://character/DamagePopupLabel.tscn" id="2_5ixxa"]
+[ext_resource type="PackedScene" uid="uid://cl3fyq2dmxbj" path="res://character/player/PlayerUi.tscn" id="3_gntrk"]
+[ext_resource type="PackedScene" uid="uid://xue5wdov5wrk" path="res://character/ExpLabel.tscn" id="3_nn08x"]
+[ext_resource type="PackedScene" uid="uid://cjvho30gcota1" path="res://ability/SwardWave.tscn" id="4_4cxkg"]
+[ext_resource type="PackedScene" uid="uid://djwhiuf7xqvk1" path="res://interaction/ExpBall.tscn" id="4_nn08x"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kyqiw"]
+radius = 47.0
+height = 110.0
+
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("body", "curOrientationNode", "ui") groups=["player"]]
+collision_mask = 3
+script = ExtResource("1_kyqiw")
+dodgeSpeed = 2000.0
+body = NodePath("Body")
+curOrientationNode = NodePath("CurOrientation")
+ui = NodePath("PlayerUi")
+expPopupScene = ExtResource("3_nn08x")
+expBallScene = ExtResource("4_nn08x")
+swordWaveScene = ExtResource("4_4cxkg")
+damagePopupScene = ExtResource("2_5ixxa")
+
+[node name="Body" type="Sprite2D" parent="."]
+texture = ExtResource("1_rpqav")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_kyqiw")
+
+[node name="CurOrientation" type="Node2D" parent="."]
+rotation = -1.2234758
+
+[node name="ColorRect" type="ColorRect" parent="CurOrientation"]
+offset_left = 5.0418205
+offset_top = -0.7616093
+offset_right = 40.63147
+offset_bottom = 8.160159
+scale = Vector2(5.096184, 0.6497265)
+color = Color(1, 1, 1, 0.42745098)
+metadata/_edit_use_anchors_ = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position_smoothing_enabled = true
+
+[node name="PlayerUi" parent="." instance=ExtResource("3_gntrk")]

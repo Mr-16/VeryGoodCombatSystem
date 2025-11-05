@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://batkkue6o8d0v"]
+
+[ext_resource type="Script" uid="uid://cbcqbvxcvtsmf" path="res://character/enemy/EnemySpawner.cs" id="1_4b1db"]
+[ext_resource type="PackedScene" uid="uid://chxw46jf8kd5n" path="res://character/enemy/Enemy.tscn" id="2_4l853"]
+
+[node name="EnemySpawner" type="Node2D"]
+script = ExtResource("1_4b1db")
+EnemyScene = ExtResource("2_4l853")
+SpawnInterval = 1.0

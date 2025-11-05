@@ -1,0 +1,53 @@
+[gd_scene load_steps=9 format=3 uid="uid://chxw46jf8kd5n"]
+
+[ext_resource type="Script" uid="uid://kvxr5excx0d" path="res://character/enemy/Enemy.cs" id="1_3anmj"]
+[ext_resource type="PackedScene" uid="uid://xue5wdov5wrk" path="res://character/ExpLabel.tscn" id="2_v11k7"]
+[ext_resource type="PackedScene" uid="uid://djwhiuf7xqvk1" path="res://interaction/ExpBall.tscn" id="3_lteba"]
+[ext_resource type="PackedScene" uid="uid://0wx2amadkx86" path="res://character/DamagePopupLabel.tscn" id="4_gvcy5"]
+[ext_resource type="PackedScene" uid="uid://cjvho30gcota1" path="res://ability/SwardWave.tscn" id="4_v11k7"]
+[ext_resource type="PackedScene" uid="uid://k68r3oi4aw7s" path="res://character/enemy/EnemyUi.tscn" id="5_212fn"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wovta"]
+radius = 27.0
+height = 64.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_m1htj"]
+radius = 323.30325
+
+[node name="Enemy" type="CharacterBody2D" node_paths=PackedStringArray("rect", "damageArea", "ui") groups=["enemy"]]
+light_mask = 2
+visibility_layer = 2
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_3anmj")
+rect = NodePath("ColorRect")
+damageArea = NodePath("DamageArea")
+ui = NodePath("EnemyUi")
+expPopupScene = ExtResource("2_v11k7")
+expBallScene = ExtResource("3_lteba")
+swordWaveScene = ExtResource("4_v11k7")
+damage = 10
+damagePopupScene = ExtResource("4_gvcy5")
+level = 10
+
+[node name="EnemyUi" parent="." instance=ExtResource("5_212fn")]
+offset_top = -67.0
+offset_bottom = -67.0
+scale = Vector2(0.192, 0.217)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -20.0
+offset_top = -21.0
+offset_right = 20.0
+offset_bottom = 19.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+light_mask = 2
+visibility_layer = 2
+shape = SubResource("CapsuleShape2D_wovta")
+
+[node name="DamageArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DamageArea"]
+shape = SubResource("CircleShape2D_m1htj")
+debug_color = Color(0.5599926, 0.13770875, 0, 0.41960785)

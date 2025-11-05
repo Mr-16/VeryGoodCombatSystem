@@ -1,0 +1,56 @@
+[gd_scene load_steps=2 format=3 uid="uid://k68r3oi4aw7s"]
+
+[ext_resource type="Script" uid="uid://bo14fv3wfa8fh" path="res://character/enemy/EnemyUi.cs" id="1_way7j"]
+
+[node name="EnemyUi" type="Control" node_paths=PackedStringArray("healthBar", "healthLabel", "nameLabel", "levelLabel")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.8119941, 2.04)
+script = ExtResource("1_way7j")
+healthBar = NodePath("HealthBar")
+healthLabel = NodePath("HealthLabel")
+nameLabel = NodePath("NameLabel")
+levelLabel = NodePath("LevelLabel")
+
+[node name="HealthBar" type="ProgressBar" parent="."]
+modulate = Color(1, 0, 0, 1)
+layout_mode = 0
+offset_left = -694.81464
+offset_top = -63.235306
+offset_right = -106.75336
+offset_bottom = 4.2443695
+scale = Vector2(2.412808, 2.4117646)
+theme_override_font_sizes/font_size = 100
+show_percentage = false
+
+[node name="NameLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = -653.97565
+offset_top = -60.784317
+offset_right = -363.97565
+offset_bottom = 76.21568
+theme_override_font_sizes/font_size = 100
+text = "Name"
+
+[node name="LevelLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 484.549
+offset_top = -56.37255
+offset_right = 676.549
+offset_bottom = 80.62745
+theme_override_font_sizes/font_size = 100
+text = "Lv.0"
+
+[node name="HealthLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = -72.296036
+offset_top = -59.803925
+offset_right = 80.703964
+offset_bottom = 77.196075
+theme_override_font_sizes/font_size = 100
+text = "0/0"
+horizontal_alignment = 1
