@@ -10,7 +10,7 @@ namespace VeryGoodCombatSystem.character.player.PlayerState
     {
         public Player player;
         public abstract void Enter();
-        public abstract void Update();
+        public abstract void Update(float delta);
         public abstract void Exit();
     }
 }

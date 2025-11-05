@@ -131,3 +131,5 @@ nohup.out
 # 数据库文件（如果本地使用）
 *.db
 *.sqlite
+*.uid
+.godot/editor/filesystem_update4

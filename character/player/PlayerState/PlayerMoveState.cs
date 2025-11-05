@@ -1,3 +1,4 @@
+using Godot;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,17 +16,36 @@ namespace VeryGoodCombatSystem.character.player.PlayerState
 
         public override void Enter()
         {
-            throw new NotImplementedException();
+            GD.Print("进入MoveState");
         }
 
-        public override void Update()
+        public override void Update(float delta)
         {
-            throw new NotImplementedException();
+            player.Velocity = player.moveDirection * player.moveSpeed;
+            player.Anim();
+            player.MoveAndSlide();
+            player.UpdateCurOrientation();
+            player.moveDirection = Input.GetVector("moveLeft", "moveRight", "moveUp", "moveDown");
+            if (player.moveDirection == Vector2.Zero)
+            {
+                player.ChangeState(player.idleState);
+                return;
+            }
+            if (Input.IsActionJustPressed("dodge"))
+            {
+                player.ChangeState(player.dodgeState);
+                return;
+            }
+            if (Input.IsActionJustPressed("attack"))
+            {
+                player.ChangeState(player.attackState);
+                return;
+            }
         }
 
         public override void Exit()
         {
-            throw new NotImplementedException();
+            GD.Print("退出MoveState");
         }
     }
 }
