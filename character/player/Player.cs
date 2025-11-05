@@ -7,8 +7,6 @@ public partial class Player : CharacterBase
 	[Export]
 	public float moveSpeed = 300.0f;
 
-    
-
     [Export]
     public float dodgeDuration = 0.5f;
     public float dodgeTimer = 0f;
@@ -25,7 +23,7 @@ public partial class Player : CharacterBase
 
     [Export]
     public float dodgeColdDownDuration = 0.5f;
-    private bool isDodgeColdDown = false;
+    public bool isDodgeColdDown = false;
 
     public Vector2 moveDirection;
 	public Vector2 curOrientation = Vector2.Right;//默认向右, 持久化记录人物朝向
@@ -36,7 +34,6 @@ public partial class Player : CharacterBase
     private Node2D curOrientationNode;
     [Export]
     private PlayerUi ui;
-
 
     public PlayerStateBase curState;
     public PlayerIdleState idleState;
@@ -69,112 +66,17 @@ public partial class Player : CharacterBase
         newState.Enter();
     }
 
-    private void HandleIdle()
+ 
+    public void Move()
     {
-        GD.Print("HandleIdle()");
-
+        moveDirection = Input.GetVector("moveLeft", "moveRight", "moveUp", "moveDown");
+        Velocity = moveDirection * moveSpeed;
+        UpdateCurOrientation();
+        Anim();
+        MoveAndSlide();
     }
 
-    //private void HandleMove()
-    //{
-    //    GD.Print("HandleMove()");
-    //    moveDirection = Input.GetVector("moveLeft", "moveRight", "moveUp", "moveDown");
-    //    updateCurOrientation();
-    //    Velocity = moveDirection * moveSpeed;
-    //    Anim();
-    //    MoveAndSlide();
-
-    //    if (moveDirection == Vector2.Zero)
-    //    {
-    //        SwitchState(PlayerState.Idle);
-    //        return;
-    //    }
-    //    else if (Input.IsActionJustPressed("attack"))
-    //    {
-    //        SwitchState(PlayerState.BeforeAttack);
-    //        return;
-    //    }
-    //    else if (Input.IsActionJustPressed("dodge"))
-    //    {
-    //        SwitchState(PlayerState.Dodging);
-    //        return;
-    //    }
-
-    //}
-
-
-    //private void HandleBeforeAttack(float delta)
-    //{
-    //    GD.Print("HandleBeforeAttack()");
-    //    //这里如果有按键输入, 可以马上切去move/dodge
-
-
-    //    beforeAttackTimer += delta;
-    //    if(beforeAttackTimer >= beforeAttackDuration)
-    //    {
-    //        beforeAttackTimer = 0;
-    //        Attack();//这里马上攻击, 因为HandleAttack其实只是用来硬直的
-    //        SwitchState(PlayerState.Attack);
-    //    }
-    //}
-    //private float attackDuration = 0.5f;
-    //private float attackTimer = 0;
-    //private void HandleAttack(float delta)
-    //{
-    //    GD.Print("HandleAttack()");
-    //    attackTimer += delta;
-    //    if(attackTimer >= attackDuration)
-    //    {
-    //        attackTimer = 0;
-    //        SwitchState(PlayerState.AfterAttack);
-    //    }
-    //}
-
-    //private void HandleAfterAttack(float delta)
-    //{
-    //    GD.Print("HandleAfterAttack()");
-    //    //这里如果有按键输入, 可以马上切去move/dodge/afterAttack
-
-    //    afterAttackTimer += delta;
-    //    if (afterAttackTimer >= afterAttackDuration)
-    //    {
-    //        attackTimer = 0;
-    //        SwitchState(PlayerState.Idle);
-    //    }
-    //}
-
-    //private void HandleDodge()
-    //{
-    //    GD.Print("HandleDodge()");
-    //    Velocity = curOrientation * dodgeSpeed;
-    //    MoveAndSlide();
-    //    GetTree().CreateTimer(dodgeDuration).Timeout += () => SwitchState(PlayerState.Idle);
-    //}
-
-    private void SwitchState(PlayerStateBase newState)
-    {
-        if (newState == curState) return;
-        GD.Print($"转换状态 : {curState} => {newState}");
-        curState = newState;
-    }
-
-
-
-
-
-
-
-
-
-    //移动控制
- //   private void Move()
-	//{
- //       if (isDodging) return;
- //       moveDirection = Input.GetVector("moveLeft", "moveRight", "moveUp", "moveDown");
-        
- //   }
-
-	public void UpdateCurOrientation()
+	private void UpdateCurOrientation()
 	{
 
         if (moveDirection.X < 0 && moveDirection.Y == 0)//纯左
@@ -229,7 +131,7 @@ public partial class Player : CharacterBase
     }
 
 	//动画播放
-	public void Anim()
+	private void Anim()
 	{
 		if(moveDirection.X < 0)
 		{
@@ -246,34 +148,47 @@ public partial class Player : CharacterBase
 		}
     }
 
-    //攻击
-    private void Attack()
-    {
-        GD.Print("attacking");
-        
 
+    public void Dodge()
+    {
+        Velocity = curOrientation * dodgeSpeed;
+        MoveAndSlide();
     }
 
-    ////闪避
-    //private void Dodge()
-    //{
-    //    if (isDodging == true || isDodgeColdDown || !Input.IsActionJustPressed("dodge")) return;//冷却ing或者没按键都不往下走
-    //    isDodging = true;
 
-    //    GetTree().CreateTimer(dodgeDuration).Timeout += () =>
-    //    {
-    //        isDodging = false;
-    //        isDodgeColdDown = true;
-    //        GetTree().CreateTimer(dodgeColdDownDuration).Timeout += () => isDodgeColdDown = false;
-    //    };
-    //}
+    //攻击
+    public void Attack()
+    {
+        GD.Print("attacking");
+        int waveCount = 5; // 刀波数量（越多越密集）
+        float totalAngle = 80f; // 扇形总角度（度），角度越大范围越宽
 
-    //private void Dodging(float delta)
-    //{
-    //    if (isDodging == false) return;
-    //    Velocity = curOrientation * dodgeSpeed;
-    //    MoveAndSlide();
-    //}
+        // 计算每个刀波的角度偏移（从左到右均匀分布）
+        float startAngle = -totalAngle / 2f; // 起始角度（左半部分）
+        float angleStep = waveCount > 1 ? totalAngle / (waveCount - 1) : 0f; // 相邻刀波的角度差
+
+        for (int i = 0; i < waveCount; i++)
+        {
+            // 计算当前刀波的角度（转换为弧度，Godot旋转用弧度）
+            float currentAngle = startAngle + i * angleStep;
+            float angleRad = currentAngle * Mathf.Pi / 180f;
+
+            // 基于当前朝向旋转，得到该刀波的方向
+            Vector2 waveDir = curOrientation.Rotated(angleRad);
+
+            // 实例化刀波并设置属性
+            SwordWave wave = swordWaveScene.Instantiate<SwordWave>();
+            wave.damage = damage;
+            wave.direction = waveDir; // 扇形方向
+            wave.moveSpeed = 300;
+            wave.surviveTime = 0.3f;
+            // 位置：从角色位置沿当前刀波方向偏移50像素（避免贴角色生成）
+            wave.GlobalPosition = GlobalPosition + 50 * waveDir;
+
+            GetTree().CurrentScene.AddChild(wave);
+        }
+    }
+
 
 
     public override void TakeDamage(int damage)
@@ -293,6 +208,5 @@ public partial class Player : CharacterBase
         base.RefreshAttribute();
         ui.UpdateExpAndLevel(curExp, maxExp, level);
         ui.UpdateHealth(maxHealth, curHealth);
-
     }
 }

@@ -27,14 +27,15 @@ namespace VeryGoodCombatSystem.character.player.PlayerState
                 player.dodgeTimer = 0;
                 player.ChangeState(player.idleState);
             }
+            player.Dodge();
 
-            player.Velocity = player.curOrientation * player.dodgeSpeed;
-            player.MoveAndSlide();
         }
 
         public override void Exit()
         {
             GD.Print("退出DodgeState");
+            player.isDodgeColdDown = true;
+            player.GetTree().CreateTimer(player.dodgeColdDownDuration).Timeout += ()=> player.isDodgeColdDown = false;
         }
     }
 }

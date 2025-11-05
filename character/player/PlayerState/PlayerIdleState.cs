@@ -21,13 +21,13 @@ namespace VeryGoodCombatSystem.character.player.PlayerState
 
         public override void Update(float delta)
         {
-            player.moveDirection = Input.GetVector("moveLeft", "moveRight", "moveUp", "moveDown");
-            if(player.moveDirection != Vector2.Zero)
+            Vector2 moveInput = Input.GetVector("moveLeft", "moveRight", "moveUp", "moveDown");
+            if(moveInput != Vector2.Zero)
             {
                 player.ChangeState(player.moveState);
                 return;
             }
-            if (Input.IsActionJustPressed("dodge"))
+            if (player.isDodgeColdDown == false && Input.IsActionJustPressed("dodge"))
             {
                 player.ChangeState(player.dodgeState);
                 return;
