@@ -13,12 +13,9 @@ public partial class Player : CharacterBase
     [Export]
     public float dodgeSpeed = 1000f;
 
-    public float beforeAttackDuration = 0.2f;
-    public float beforeAttackTimer = 0f;
-    public float attackDuration = 0.5f;
-    public float attackTimer = 0f;
-    public float afterAttackDuration = 0.2f;
-    public float afterAttackTimer = 0f;
+
+
+
 
 
     [Export]
@@ -26,7 +23,6 @@ public partial class Player : CharacterBase
     public bool isDodgeColdDown = false;
 
     public Vector2 moveDirection;
-	public Vector2 curOrientation = Vector2.Right;//默认向右, 持久化记录人物朝向
 
     [Export]
 	private Sprite2D body;
@@ -41,6 +37,8 @@ public partial class Player : CharacterBase
     public PlayerDodgeState dodgeState;
     public PlayerAttackState attackState;
 
+
+
     public override void _Ready()
     {
         base._Ready();
@@ -49,6 +47,7 @@ public partial class Player : CharacterBase
         dodgeState = new PlayerDodgeState(this);
         attackState = new PlayerAttackState(this);
         ChangeState(idleState);
+       
     }
 
     public override void _PhysicsProcess(double delta)
@@ -149,7 +148,7 @@ public partial class Player : CharacterBase
     }
 
 
-    public void Dodge()
+    public void Dodge(float delta)
     {
         Velocity = curOrientation * dodgeSpeed;
         MoveAndSlide();
@@ -160,32 +159,19 @@ public partial class Player : CharacterBase
     public void Attack()
     {
         GD.Print("attacking");
-        int waveCount = 5; // 刀波数量（越多越密集）
-        float totalAngle = 80f; // 扇形总角度（度），角度越大范围越宽
-
-        // 计算每个刀波的角度偏移（从左到右均匀分布）
-        float startAngle = -totalAngle / 2f; // 起始角度（左半部分）
-        float angleStep = waveCount > 1 ? totalAngle / (waveCount - 1) : 0f; // 相邻刀波的角度差
-
-        for (int i = 0; i < waveCount; i++)
+        switch (curAbility)
         {
-            // 计算当前刀波的角度（转换为弧度，Godot旋转用弧度）
-            float currentAngle = startAngle + i * angleStep;
-            float angleRad = currentAngle * Mathf.Pi / 180f;
-
-            // 基于当前朝向旋转，得到该刀波的方向
-            Vector2 waveDir = curOrientation.Rotated(angleRad);
-
-            // 实例化刀波并设置属性
-            SwordWave wave = swordWaveScene.Instantiate<SwordWave>();
-            wave.damage = damage;
-            wave.direction = waveDir; // 扇形方向
-            wave.moveSpeed = 300;
-            wave.surviveTime = 0.3f;
-            // 位置：从角色位置沿当前刀波方向偏移50像素（避免贴角色生成）
-            wave.GlobalPosition = GlobalPosition + 50 * waveDir;
-
-            GetTree().CurrentScene.AddChild(wave);
+            case AbilityType.LongSwordWave:
+                LongSwordWave();
+                break;
+            case AbilityType.ScatterSwordWave:
+                ScatterSwordWave();
+                break;
+            case AbilityType.AllDirectionSwordWave:
+                AllDirectionSwordWave();
+                break;
+            default:
+                break;
         }
     }
 
@@ -208,5 +194,11 @@ public partial class Player : CharacterBase
         base.RefreshAttribute();
         ui.UpdateExpAndLevel(curExp, maxExp, level);
         ui.UpdateHealth(maxHealth, curHealth);
+    }
+
+
+    private void SwordWave()
+    {
+        
     }
 }

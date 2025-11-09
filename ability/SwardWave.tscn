@@ -1,25 +1,36 @@
-[gd_scene load_steps=3 format=3 uid="uid://cjvho30gcota1"]
+[gd_scene load_steps=5 format=3 uid="uid://cjvho30gcota1"]
 
 [ext_resource type="Script" uid="uid://scc2uwu6f3yi" path="res://ability/SwordWave.cs" id="1_5xjm8"]
+[ext_resource type="Shader" uid="uid://dfsj4ar5kno83" path="res://ability/SwardWave.gdshader" id="2_vhl12"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_862be"]
-size = Vector2(55.944527, 8.3268795)
+[sub_resource type="CircleShape2D" id="CircleShape2D_vhl12"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vhl12"]
+shader = ExtResource("2_vhl12")
+shader_parameter/texture_size = Vector2(64, 64)
+shader_parameter/base_color = Vector4(0, 0, 1, 1)
+shader_parameter/color_wave_strength = 100.0
+shader_parameter/flash_speed = 10.0
+shader_parameter/flash_strength = 0.5
+shader_parameter/scale_speed = 1.0
+shader_parameter/scale_range = 0.5
+shader_parameter/edge_softness = 4.0
+shader_parameter/mix_strength = 1.0
 
 [node name="SwordWave" type="Area2D"]
-scale = Vector2(1.4000026, 0.119999915)
-collision_mask = 3
+scale = Vector2(2.665, 2.665)
+collision_layer = 4
+collision_mask = 7
 script = ExtResource("1_5xjm8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.37313405, 0.99999994)
-scale = Vector2(0.60027426, 10.087811)
-shape = SubResource("RectangleShape2D_862be")
+shape = SubResource("CircleShape2D_vhl12")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-offset_left = -15.671631
-offset_top = -38.0
-offset_right = 24.32837
-offset_bottom = 2.0
-scale = Vector2(0.7770693, 1.9435637)
-color = Color(0.5529412, 0.50980395, 1, 1)
+material = SubResource("ShaderMaterial_vhl12")
+offset_left = -30.0
+offset_top = -31.0
+offset_right = 34.0
+offset_bottom = 33.0
+scale = Vector2(0.97, 0.97)
 metadata/_edit_use_anchors_ = true

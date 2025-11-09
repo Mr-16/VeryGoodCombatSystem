@@ -9,8 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://djwhiuf7xqvk1" path="res://interaction/ExpBall.tscn" id="4_nn08x"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kyqiw"]
-radius = 47.0
-height = 110.0
+radius = 28.0
+height = 72.0
 
 [node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("body", "curOrientationNode", "ui") groups=["player"]]
 collision_mask = 3
@@ -21,8 +21,9 @@ curOrientationNode = NodePath("CurOrientation")
 ui = NodePath("PlayerUi")
 expPopupScene = ExtResource("3_nn08x")
 expBallScene = ExtResource("4_nn08x")
-swordWaveScene = ExtResource("4_4cxkg")
 damagePopupScene = ExtResource("2_5ixxa")
+swordWaveScene = ExtResource("4_4cxkg")
+curAbility = 1
 
 [node name="Body" type="Sprite2D" parent="."]
 texture = ExtResource("1_rpqav")
@@ -43,6 +44,7 @@ color = Color(1, 1, 1, 0.42745098)
 metadata/_edit_use_anchors_ = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.7, 0.7)
 position_smoothing_enabled = true
 
 [node name="PlayerUi" parent="." instance=ExtResource("3_gntrk")]

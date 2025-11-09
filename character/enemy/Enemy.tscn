@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://chxw46jf8kd5n"]
+[gd_scene load_steps=10 format=3 uid="uid://chxw46jf8kd5n"]
 
 [ext_resource type="Script" uid="uid://kvxr5excx0d" path="res://character/enemy/Enemy.cs" id="1_3anmj"]
 [ext_resource type="PackedScene" uid="uid://xue5wdov5wrk" path="res://character/ExpLabel.tscn" id="2_v11k7"]
@@ -11,24 +11,28 @@
 radius = 27.0
 height = 64.0
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_m1htj"]
-radius = 323.30325
+[sub_resource type="CircleShape2D" id="CircleShape2D_v11k7"]
+radius = 636.83356
 
-[node name="Enemy" type="CharacterBody2D" node_paths=PackedStringArray("rect", "damageArea", "ui") groups=["enemy"]]
+[sub_resource type="CircleShape2D" id="CircleShape2D_m1htj"]
+radius = 526.0038
+
+[node name="Enemy" type="CharacterBody2D" node_paths=PackedStringArray("rect", "eyeArea", "attackArea", "ui") groups=["enemy"]]
 light_mask = 2
 visibility_layer = 2
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("1_3anmj")
 rect = NodePath("ColorRect")
-damageArea = NodePath("DamageArea")
+eyeArea = NodePath("EyeArea")
+attackArea = NodePath("AttackArea")
 ui = NodePath("EnemyUi")
 expPopupScene = ExtResource("2_v11k7")
 expBallScene = ExtResource("3_lteba")
-swordWaveScene = ExtResource("4_v11k7")
 damage = 10
 damagePopupScene = ExtResource("4_gvcy5")
 level = 10
+swordWaveScene = ExtResource("4_v11k7")
 
 [node name="EnemyUi" parent="." instance=ExtResource("5_212fn")]
 offset_top = -67.0
@@ -46,8 +50,14 @@ light_mask = 2
 visibility_layer = 2
 shape = SubResource("CapsuleShape2D_wovta")
 
-[node name="DamageArea" type="Area2D" parent="."]
+[node name="EyeArea" type="Area2D" parent="."]
+collision_mask = 3
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DamageArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeArea"]
+shape = SubResource("CircleShape2D_v11k7")
+
+[node name="AttackArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
 shape = SubResource("CircleShape2D_m1htj")
 debug_color = Color(0.5599926, 0.13770875, 0, 0.41960785)

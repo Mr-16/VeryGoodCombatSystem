@@ -11,8 +11,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_g7tqg")
-StartGameBtn = NodePath("ColorRect/StartGameBtn")
-ExitGameBtn = NodePath("ColorRect/ExitGameBtn")
+StartGameBtn = NodePath("ColorRect/HBoxContainer/StartGameBtn")
+ExitGameBtn = NodePath("ColorRect/HBoxContainer/ExitGameBtn")
 mainScene = ExtResource("2_ykcld")
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -21,21 +21,28 @@ offset_right = 1148.0
 offset_bottom = 634.0
 color = Color(1, 0.8980392, 1, 1)
 
-[node name="ExitGameBtn" type="Button" parent="ColorRect"]
+[node name="GridContainer" type="GridContainer" parent="ColorRect"]
 layout_mode = 0
-offset_left = 619.0
-offset_top = 255.0
-offset_right = 1027.0
-offset_bottom = 400.0
-theme_override_font_sizes/font_size = 100
-text = "退出游戏"
+offset_left = 337.0
+offset_top = 280.0
+offset_right = 757.0
+offset_bottom = 438.0
+columns = 2
 
-[node name="StartGameBtn" type="Button" parent="ColorRect"]
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect"]
 layout_mode = 0
-offset_left = 134.0
-offset_top = 257.0
-offset_right = 542.0
-offset_bottom = 402.0
-theme_override_font_sizes/font_size = 100
+offset_left = 341.0
+offset_top = 301.0
+offset_right = 770.36
+offset_bottom = 378.0
+
+[node name="StartGameBtn" type="Button" parent="ColorRect/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
 text = "开始游戏
 "
+
+[node name="ExitGameBtn" type="Button" parent="ColorRect/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "退出游戏"

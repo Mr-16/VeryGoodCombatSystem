@@ -14,7 +14,7 @@ public partial class EnemyUi : Control
 
     public override void _Ready()
 	{
-        nameLabel.Text = "小坏蛋";
+        nameLabel.Text = "马嘉祺";
     }
 
 	public override void _Process(double delta)

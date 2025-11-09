@@ -1,0 +1,240 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "F:\\Godot\\_project\\VeryGoodCombatSystem\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F695068C-856D-4432-B9A0-9FAC0A2947F6}|VeryGoodCombatSystem.csproj|f:\\godot\\_project\\verygoodcombatsystem\\interaction\\expball.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F695068C-856D-4432-B9A0-9FAC0A2947F6}|VeryGoodCombatSystem.csproj|solutionrelative:interaction\\expball.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F695068C-856D-4432-B9A0-9FAC0A2947F6}|VeryGoodCombatSystem.csproj|f:\\godot\\_project\\verygoodcombatsystem\\character\\enemy\\enemystate\\enemyidlestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F695068C-856D-4432-B9A0-9FAC0A2947F6}|VeryGoodCombatSystem.csproj|solutionrelative:character\\enemy\\enemystate\\enemyidlestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F695068C-856D-4432-B9A0-9FAC0A2947F6}|VeryGoodCombatSystem.csproj|f:\\godot\\_project\\verygoodcombatsystem\\character\\enemy\\enemystate\\enemyattackstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F695068C-856D-4432-B9A0-9FAC0A2947F6}|VeryGoodCombatSystem.csproj|solutionrelative:character\\enemy\\enemystate\\enemyattackstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F695068C-856D-4432-B9A0-9FAC0A2947F6}|VeryGoodCombatSystem.csproj|f:\\godot\\_project\\verygoodcombatsystem\\character\\enemy\\enemystate\\enemystatemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F695068C-856D-4432-B9A0-9FAC0A2947F6}|VeryGoodCombatSystem.csproj|solutionrelative:character\\enemy\\enemystate\\enemystatemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F695068C-856D-4432-B9A0-9FAC0A2947F6}|VeryGoodCombatSystem.csproj|f:\\godot\\_project\\verygoodcombatsystem\\character\\enemy\\enemystate\\enemystatebase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F695068C-856D-4432-B9A0-9FAC0A2947F6}|VeryGoodCombatSystem.csproj|solutionrelative:character\\enemy\\enemystate\\enemystatebase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F695068C-856D-4432-B9A0-9FAC0A2947F6}|VeryGoodCombatSystem.csproj|f:\\godot\\_project\\verygoodcombatsystem\\character\\player\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F695068C-856D-4432-B9A0-9FAC0A2947F6}|VeryGoodCombatSystem.csproj|solutionrelative:character\\player\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F695068C-856D-4432-B9A0-9FAC0A2947F6}|VeryGoodCombatSystem.csproj|f:\\godot\\_project\\verygoodcombatsystem\\character\\enemy\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F695068C-856D-4432-B9A0-9FAC0A2947F6}|VeryGoodCombatSystem.csproj|solutionrelative:character\\enemy\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F695068C-856D-4432-B9A0-9FAC0A2947F6}|VeryGoodCombatSystem.csproj|f:\\godot\\_project\\verygoodcombatsystem\\character\\characterbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F695068C-856D-4432-B9A0-9FAC0A2947F6}|VeryGoodCombatSystem.csproj|solutionrelative:character\\characterbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F695068C-856D-4432-B9A0-9FAC0A2947F6}|VeryGoodCombatSystem.csproj|f:\\godot\\_project\\verygoodcombatsystem\\character\\player\\playerstate\\playerattackstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F695068C-856D-4432-B9A0-9FAC0A2947F6}|VeryGoodCombatSystem.csproj|solutionrelative:character\\player\\playerstate\\playerattackstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F695068C-856D-4432-B9A0-9FAC0A2947F6}|VeryGoodCombatSystem.csproj|f:\\godot\\_project\\verygoodcombatsystem\\character\\enemy\\enemyspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F695068C-856D-4432-B9A0-9FAC0A2947F6}|VeryGoodCombatSystem.csproj|solutionrelative:character\\enemy\\enemyspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F695068C-856D-4432-B9A0-9FAC0A2947F6}|VeryGoodCombatSystem.csproj|f:\\godot\\_project\\verygoodcombatsystem\\character\\enemy\\enemystate\\enemychasestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F695068C-856D-4432-B9A0-9FAC0A2947F6}|VeryGoodCombatSystem.csproj|solutionrelative:character\\enemy\\enemystate\\enemychasestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F695068C-856D-4432-B9A0-9FAC0A2947F6}|VeryGoodCombatSystem.csproj|f:\\godot\\_project\\verygoodcombatsystem\\character\\enemy\\enemystate\\enemypatrolstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F695068C-856D-4432-B9A0-9FAC0A2947F6}|VeryGoodCombatSystem.csproj|solutionrelative:character\\enemy\\enemystate\\enemypatrolstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 15,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{6324226f-61b6-4f28-92ee-18d4b5fe1e48}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CharacterBase.cs",
+              "DocumentMoniker": "F:\\Godot\\_project\\VeryGoodCombatSystem\\character\\CharacterBase.cs",
+              "RelativeDocumentMoniker": "character\\CharacterBase.cs",
+              "ToolTip": "F:\\Godot\\_project\\VeryGoodCombatSystem\\character\\CharacterBase.cs",
+              "RelativeToolTip": "character\\CharacterBase.cs",
+              "ViewState": "AgIAAHQAAAAAAAAAAAAQwLEAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-06T12:33:47.108Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Enemy.cs",
+              "DocumentMoniker": "F:\\Godot\\_project\\VeryGoodCombatSystem\\character\\enemy\\Enemy.cs",
+              "RelativeDocumentMoniker": "character\\enemy\\Enemy.cs",
+              "ToolTip": "F:\\Godot\\_project\\VeryGoodCombatSystem\\character\\enemy\\Enemy.cs",
+              "RelativeToolTip": "character\\enemy\\Enemy.cs",
+              "ViewState": "AgIAAIgAAAAAAAAAAAAgwMcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-06T12:33:43.687Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Player.cs",
+              "DocumentMoniker": "F:\\Godot\\_project\\VeryGoodCombatSystem\\character\\player\\Player.cs",
+              "RelativeDocumentMoniker": "character\\player\\Player.cs",
+              "ToolTip": "F:\\Godot\\_project\\VeryGoodCombatSystem\\character\\player\\Player.cs",
+              "RelativeToolTip": "character\\player\\Player.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAAD8AAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-09T09:43:30.265Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EnemyStateMachine.cs",
+              "DocumentMoniker": "F:\\Godot\\_project\\VeryGoodCombatSystem\\character\\enemy\\EnemyState\\EnemyStateMachine.cs",
+              "RelativeDocumentMoniker": "character\\enemy\\EnemyState\\EnemyStateMachine.cs",
+              "ToolTip": "F:\\Godot\\_project\\VeryGoodCombatSystem\\character\\enemy\\EnemyState\\EnemyStateMachine.cs",
+              "RelativeToolTip": "character\\enemy\\EnemyState\\EnemyStateMachine.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-09T07:23:05.961Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EnemyStateBase.cs",
+              "DocumentMoniker": "F:\\Godot\\_project\\VeryGoodCombatSystem\\character\\enemy\\EnemyState\\EnemyStateBase.cs",
+              "RelativeDocumentMoniker": "character\\enemy\\EnemyState\\EnemyStateBase.cs",
+              "ToolTip": "F:\\Godot\\_project\\VeryGoodCombatSystem\\character\\enemy\\EnemyState\\EnemyStateBase.cs",
+              "RelativeToolTip": "character\\enemy\\EnemyState\\EnemyStateBase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-09T07:19:21.221Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EnemyIdleState.cs",
+              "DocumentMoniker": "F:\\Godot\\_project\\VeryGoodCombatSystem\\character\\enemy\\EnemyState\\EnemyIdleState.cs",
+              "RelativeDocumentMoniker": "character\\enemy\\EnemyState\\EnemyIdleState.cs",
+              "ToolTip": "F:\\Godot\\_project\\VeryGoodCombatSystem\\character\\enemy\\EnemyState\\EnemyIdleState.cs",
+              "RelativeToolTip": "character\\enemy\\EnemyState\\EnemyIdleState.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-09T07:33:59.981Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "EnemyPatrolState.cs",
+              "DocumentMoniker": "F:\\Godot\\_project\\VeryGoodCombatSystem\\character\\enemy\\EnemyState\\EnemyPatrolState.cs",
+              "RelativeDocumentMoniker": "character\\enemy\\EnemyState\\EnemyPatrolState.cs",
+              "ToolTip": "F:\\Godot\\_project\\VeryGoodCombatSystem\\character\\enemy\\EnemyState\\EnemyPatrolState.cs",
+              "RelativeToolTip": "character\\enemy\\EnemyState\\EnemyPatrolState.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAABsAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-09T07:36:17.142Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "EnemyChaseState.cs",
+              "DocumentMoniker": "F:\\Godot\\_project\\VeryGoodCombatSystem\\character\\enemy\\EnemyState\\EnemyChaseState.cs",
+              "RelativeDocumentMoniker": "character\\enemy\\EnemyState\\EnemyChaseState.cs",
+              "ToolTip": "F:\\Godot\\_project\\VeryGoodCombatSystem\\character\\enemy\\EnemyState\\EnemyChaseState.cs",
+              "RelativeToolTip": "character\\enemy\\EnemyState\\EnemyChaseState.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAAAB8AAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-09T07:38:17.218Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EnemyAttackState.cs",
+              "DocumentMoniker": "F:\\Godot\\_project\\VeryGoodCombatSystem\\character\\enemy\\EnemyState\\EnemyAttackState.cs",
+              "RelativeDocumentMoniker": "character\\enemy\\EnemyState\\EnemyAttackState.cs",
+              "ToolTip": "F:\\Godot\\_project\\VeryGoodCombatSystem\\character\\enemy\\EnemyState\\EnemyAttackState.cs",
+              "RelativeToolTip": "character\\enemy\\EnemyState\\EnemyAttackState.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAAABwAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-09T07:42:24.475Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "EnemySpawner.cs",
+              "DocumentMoniker": "F:\\Godot\\_project\\VeryGoodCombatSystem\\character\\enemy\\EnemySpawner.cs",
+              "RelativeDocumentMoniker": "character\\enemy\\EnemySpawner.cs",
+              "ToolTip": "F:\\Godot\\_project\\VeryGoodCombatSystem\\character\\enemy\\EnemySpawner.cs",
+              "RelativeToolTip": "character\\enemy\\EnemySpawner.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-09T08:26:59.59Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "PlayerAttackState.cs",
+              "DocumentMoniker": "F:\\Godot\\_project\\VeryGoodCombatSystem\\character\\player\\PlayerState\\PlayerAttackState.cs",
+              "RelativeDocumentMoniker": "character\\player\\PlayerState\\PlayerAttackState.cs",
+              "ToolTip": "F:\\Godot\\_project\\VeryGoodCombatSystem\\character\\player\\PlayerState\\PlayerAttackState.cs",
+              "RelativeToolTip": "character\\player\\PlayerState\\PlayerAttackState.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAB0AAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-09T09:54:35.734Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ExpBall.cs",
+              "DocumentMoniker": "F:\\Godot\\_project\\VeryGoodCombatSystem\\interaction\\ExpBall.cs",
+              "RelativeDocumentMoniker": "interaction\\ExpBall.cs",
+              "ToolTip": "F:\\Godot\\_project\\VeryGoodCombatSystem\\interaction\\ExpBall.cs",
+              "RelativeToolTip": "interaction\\ExpBall.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-09T12:45:00.875Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

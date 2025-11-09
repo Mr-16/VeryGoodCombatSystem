@@ -27,7 +27,9 @@ namespace VeryGoodCombatSystem.character.player.PlayerState
                 player.dodgeTimer = 0;
                 player.ChangeState(player.idleState);
             }
-            player.Dodge();
+            player.Dodge(delta);
+
+
 
         }
 

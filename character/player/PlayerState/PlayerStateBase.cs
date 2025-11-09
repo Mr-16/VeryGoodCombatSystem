@@ -8,7 +8,7 @@ namespace VeryGoodCombatSystem.character.player.PlayerState
 {
     public abstract class PlayerStateBase
     {
-        public Player player;
+        protected Player player;
         public abstract void Enter();
         public abstract void Update(float delta);
         public abstract void Exit();

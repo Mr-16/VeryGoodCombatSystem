@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://dak6baxqcqrh5"]
+
+[ext_resource type="Shader" uid="uid://d0feku75vdy1i" path="res://shader/test.gdshader" id="1_igx3d"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_l1gpw"]
+shader = ExtResource("1_igx3d")
+shader_parameter/texture_size = Vector2(64, 64)
+shader_parameter/base_color = Vector4(1, 0.2, 0, 1)
+shader_parameter/color_wave_strength = 0.3
+shader_parameter/flash_speed = 2.0
+shader_parameter/flash_strength = 0.2
+shader_parameter/scale_speed = 1.0
+shader_parameter/scale_range = 0.2
+shader_parameter/edge_softness = 2.0
+shader_parameter/mix_strength = 0.5
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_l1gpw")
+offset_left = -58.000004
+offset_top = -58.0
+offset_right = 5.999996
+offset_bottom = 6.0
+scale = Vector2(1.885, 1.885)
